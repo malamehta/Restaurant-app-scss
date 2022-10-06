@@ -1,0 +1,66 @@
+
+$white-color:#fff;
+$orange-color: #ff7800;
+$black-color: #130f40;
+$lightest-gray-color:#eee;
+$light-gray-color: #666;
+
+$box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+$border: .2rem solid gray;
+$outline: .1rem solid gray;
+$outline-hover: .1rem solid rgb(122, 119, 119);
+
+
+// screen size
+$min-mobile-devices:320px;
+$max-mobile-devices:480px;
+$min-ipads-devices:481px;
+$max-ipads-devices:768px;
+$min-small-screen-laptop:769px;
+$max-small-screen-laptop:1024px;
+$min-large-screen-laptop:1025px;
+$max-large-screen-laptop:1200px;
+$extra-large-screen:1201px ;
+
+
+@mixin flexlayout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin centering($topValue){
+    position:absolute;
+    top:$topValue;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+@mixin CenteringByFlex{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    @media (max-width:$max-small-screen-laptop){
+        font-size: 55%;
+    }
+    @media (max-width:$max-mobile-devices){
+        font-size: 50%;
+    }
+}
